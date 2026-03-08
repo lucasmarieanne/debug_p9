@@ -14,6 +14,8 @@ const EventList = () => {
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   
+  // CODE PAR DÉFAUT -------------------------------------------
+
   // const filteredEvents = (
   //   (!type
   //     ? data?.events
@@ -29,6 +31,7 @@ const EventList = () => {
   // });
   
   const eventsToShow = data?.events || [];
+  
   const typedEvents = type
     ? eventsToShow.filter(event => event.type === type)
     : eventsToShow;
